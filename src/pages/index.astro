@@ -1,11 +1,21 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import ScrollBackground from "../components/ScrollBackground.jsx";
+import SectionBlock from "../components/SectionBlock.jsx";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { sectionsData } from "../data/sectionsData.js";
+import Hero from "../components/Hero";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout title="ONTIME Creative  ">
+  <Hero client:load />
+  <ScrollBackground client:load>
+    {
+      sectionsData.map((section, i) => (
+        <SectionBlock
+          section={section}
+          bg={i % 2 === 1 ? "dark" : "offWhite"}
+        />
+      ))
+    }
+  </ScrollBackground>
+</BaseLayout>

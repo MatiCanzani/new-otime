@@ -1,0 +1,31 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Projects">
+  <section id="portfolio" class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-12">
+        Our Portfolio
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <img
+            src="/path/to/project1.jpg"
+            alt="Project 1"
+            class="w-full h-64 object-cover"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">
+              Project Title
+            </h3>
+            <p class="text-lg text-gray-600">
+              A description of the project goes here.
+            </p>
+          </div>
+        </div>
+        <!-- Repeat for more projects -->
+      </div>
+    </div>
+  </section>
+</BaseLayout>
