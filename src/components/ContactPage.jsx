@@ -2,7 +2,6 @@ export default function Hero() {
   return (
     <section className="hero section bg-black text-white py-20 px-6">
       <div className="container mx-auto flex flex-col md:flex-row items-center gap-12">
-        
         <div className="flex flex-col flex-1">
           <h1 className="text-6xl md:text-[5rem] font-semibold leading-tight mb-6 font-suisse">
             <div className="mb-2">
@@ -23,19 +22,10 @@ export default function Hero() {
           </a>
 
           <p className="mt-8 max-w-xl text-lg leading-relaxed font-suisse">
-            At ONTIME, we don't just design—we innovate, we inspire, we transform.
-            Our comprehensive suite of creative services is designed to elevate your brand and captivate your audience.
+            At ONTIME, we don't just design—we innovate, we inspire, we
+            transform. Our comprehensive suite of creative services is designed
+            to elevate your brand and captivate your audience.
           </p>
-        </div>
-
-        <div className="flex justify-center md:justify-end flex-1">
-          <img
-            src="https://cdn.prod.website-files.com/66faee7ca2c53dbc454d6bda/66fd075557df641ecccd0be4_Focused%20Creativity%20in%20a%20Modern%20Professional%20Workspace.jpeg"
-            alt="Focused Creativity Workspace"
-            loading="lazy"
-            className="max-w-full rounded-lg shadow-lg"
-            width={556}
-          />
         </div>
       </div>
     </section>

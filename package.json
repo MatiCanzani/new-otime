@@ -10,17 +10,18 @@
   },
   "dependencies": {
     "@astrojs/partytown": "^2.1.4",
-    "@astrojs/react": "^4.2.7",
-    "@astrojs/vercel": "^8.1.4",
+    "@astrojs/react": "^4.3.0",
+    "@astrojs/vercel": "^8.1.5",
     "@types/react": "^19.1.4",
     "@types/react-dom": "^19.1.5",
-    "astro": "^5.7.13",
+    "astro": "^5.9.0",
     "framer-motion": "^12.11.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
   "pnpm": {
     "ignoredBuiltDependencies": [
+      "@tailwindcss/oxide",
       "esbuild",
       "sharp"
     ]

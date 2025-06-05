@@ -1,9 +1,57 @@
 @import "tailwindcss";
 
+/* Font Faces */
 @font-face {
-        font-family: "SuisseIntl-Regular";
-        src: url("../assets/fonts/SuisseIntl-Regular.ttf") format("truetype");
-        font-weight: normal;
-        font-style: normal;
-        font-display: swap;
-      }
+  font-family: "Suisse Intl";
+  src: url("/fonts/fonnts.com-Suisse_Intl_Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Suisse Intl";
+  src: url("/fonts/fonnts.com-Suisse_Intl_Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Suisse Intl";
+  src: url("/fonts/fonnts.com-Suisse_Intl_Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Add test classes to verify fonts work */
+.test-font-regular {
+  font-family: "Suisse Intl", sans-serif;
+  font-weight: 400;
+}
+
+.test-font-medium {
+  font-family: "Suisse Intl", sans-serif;
+  font-weight: 500;
+}
+
+.test-font-bold {
+  font-family: "Suisse Intl", sans-serif;
+  font-weight: 700;
+}
+
+.test-color {
+  background-color: #bbbe64;
+  color: white;
+  padding: 1rem;
+}
+
+@theme {
+  --font-suisse: "Suisse Intl", "sans-serif";
+  --color-mostard: #bbbe64;
+  --color-grape: #8e5572;
+  --color-off-white: #f2f7f2;
+  --color-beige: #58aa99;
+  --color-dark-grape: #443850;
+}
