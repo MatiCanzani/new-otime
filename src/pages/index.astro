@@ -1,21 +1,10 @@
 ---
-import ScrollBackground from "../components/ScrollBackground.jsx";
-import SectionBlock from "../components/SectionBlock.jsx";
+import Carousel from "../components/Carousel";
+import OnTimeClient from "../components/OnTimeClient";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { sectionsData } from "../data/sectionsData.js";
-import Hero from "../components/Hero";
 ---
 
-<BaseLayout title="ONTIME Creative  ">
-  <Hero client:load />
-  <ScrollBackground client:load>
-    {
-      sectionsData.map((section, i) => (
-        <SectionBlock
-          section={section}
-          bg={i % 2 === 1 ? "dark" : "offWhite"}
-        />
-      ))
-    }
-  </ScrollBackground>
+<BaseLayout title="ONTIME Creative">
+  <OnTimeClient client:load />
+  <Carousel client:load />
 </BaseLayout>

@@ -1,10 +1,10 @@
 ---
 import ContactForm from "../components/ContactForm.jsx";
-import BaseLayout from "../layouts/BaseLayout.astro";
 import ContactHero from "../components/ContactHero.astro";
+import PagesLayout from "../layouts/PagesLayout.astro";
 ---
 
-<BaseLayout title="Contact us">
+<PagesLayout title="Contact us">
   <ContactHero />
   <main class="max-w-7xl mx-auto py-20 px-6 md:px-20">
     <h1 class="text-5xl font-extrabold text-center mb-12">
@@ -43,4 +43,4 @@ import ContactHero from "../components/ContactHero.astro";
       </aside>
     </div>
   </main>
-</BaseLayout>
+</PagesLayout>

@@ -1,26 +1,21 @@
-export default function SectionBlock({ section, bg = "offWhite" }) {
+// src/components/SectionBlock.jsx
+import CTA from "./CallToAction";
+
+export default function SectionBlock({ section }) {
   return (
     <section
       id={`section-${section.id}`}
-      data-bg={bg}
-      className="min-h-screen py-16 px-8 flex flex-col items-center align-center gap-8 font-suisse"
+      className="h-screen flex items-center justify-center py-16 px-8 bg-transparent"
     >
-      <h2 className="text-6xl max-w-3xl text-center">{section.title}</h2>
-      <img
-        src={section.imgSrc}
-        alt={section.imgAlt}
-        className="max-w-xl rounded-xl"
-      />
-      {section.item && (
-        <div className="max-w-xl w-full">
-          {section.items.map((item, i) => (
-            <div key={i} className="mb-6">
-              <h3 className="font-bold text-2xl mb-1">{item.title}</h3>
-              {item.text && <p>{item.text}</p>}
-            </div>
-          ))}
-        </div>
-      )}
+      <div className="container mx-auto flex flex-col items-center gap-8">
+        <h2 className="text-6xl text-center">{section.title}</h2>
+        <img
+          src={section.imgSrc}
+          alt={section.imgAlt}
+          className="max-w-xl rounded-xl"
+        />
+        <CTA link={section.link} text={section.cta} className="text-current" />
+      </div>
     </section>
   );
 }

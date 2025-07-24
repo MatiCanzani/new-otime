@@ -1,0 +1,46 @@
+---
+import Image from "astro/components/Image.astro";
+import PagesLayout from "../layouts/PagesLayout.astro";
+---
+
+<PagesLayout title="Who We Are">
+  <section id="about" class="pt-24 bg-black text-white">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-4xl md:text-6xl font-extrabold mb-4 uppercase">
+        Who's Behind This?
+      </h2>
+      <div class="flex flex-col w-full">
+        <p class="text-lg my-2 text-left uppercase font-bold">
+          Nicolás Canzani.
+        </p>
+        <p class="text-base mb-12 w-9/10 text-left">
+          Designer, filmmaker, creative. For over a decade, I’ve helped brands
+          look the way they should — from global campaigns to boutique projects.
+          From the University of Buenos Aires to managing
+        </p>
+      </div>
+      <div class="flex justify-center gap-8 flex-col">
+        <div class="w-full">
+          <Image
+            src="https://images.pexels.com/photos/7504612/pexels-photo-7504612.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+            alt="About image"
+            width="50"
+            height="50"
+            class="w-full h-auto rounded-lg shadow-lg"
+          />
+        </div>
+        <div class="w-full">
+          <p class="text-lg">
+            Working with a team that gets it: every brand has a story, but it
+            also needs taste, vision, and strategy .
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="w-full text-center my-20 mb-0 h-full">
+      <p class="text-2xl italic uppercase font-semibold">
+        We don’t sell hype. <br /> We sell well-executed ideas.
+      </p>
+    </div>
+  </section>
+</PagesLayout>

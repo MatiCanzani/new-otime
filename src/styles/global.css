@@ -8,7 +8,6 @@
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: "Suisse Intl";
   src: url("/fonts/fonnts.com-Suisse_Intl_Medium.woff") format("woff");
@@ -16,7 +15,6 @@
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: "Suisse Intl";
   src: url("/fonts/fonnts.com-Suisse_Intl_Bold.woff") format("woff");
@@ -25,33 +23,60 @@
   font-display: swap;
 }
 
-/* Add test classes to verify fonts work */
-.test-font-regular {
+body {
   font-family: "Suisse Intl", sans-serif;
-  font-weight: 400;
 }
 
-.test-font-medium {
-  font-family: "Suisse Intl", sans-serif;
-  font-weight: 500;
-}
 
-.test-font-bold {
-  font-family: "Suisse Intl", sans-serif;
-  font-weight: 700;
-}
-
-.test-color {
-  background-color: #bbbe64;
-  color: white;
-  padding: 1rem;
-}
-
-@theme {
-  --font-suisse: "Suisse Intl", "sans-serif";
+/* CSS Variables (opcional, si las querés usar con var(--x)) */
+:root {
+  --font-suisse: "Suisse Intl", sans-serif;
   --color-mostard: #bbbe64;
   --color-grape: #8e5572;
   --color-off-white: #f2f7f2;
   --color-beige: #58aa99;
   --color-dark-grape: #443850;
+}
+
+/* Test classes */
+.font-regular {
+  font-family: var(--font-suisse);
+  font-weight: 400;
+}
+.font-medium {
+  font-family: var(--font-suisse);
+  font-weight: 500;
+}
+.font-bold {
+  font-family: var(--font-suisse);
+  font-weight: 700;
+}
+.color {
+  background-color: var(--color-mostard);
+  color: white;
+  padding: 1rem;
+}
+
+:root {
+  --colors-bg-default: #ffffff;
+  --colors-bg-dark:   #000000;
+}
+html.dark {
+  --colors-bg-default: #000000;
+  --colors-bg-dark:   #ffffff;
+}
+
+
+.swiper-pagination-bullet {
+  background-color: #ff6347;
+}
+
+/* Cambiar color cuando el punto está activo */
+.swiper-pagination-bullet-active {
+  background-color: #4CAF50;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
 }
