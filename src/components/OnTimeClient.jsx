@@ -5,6 +5,7 @@ import Brands from "./Brands";
 import Hero from "./Hero";
 import SectionBlock from "./SectionBlock";
 
+
 export default function OnTimeClient() {
   const [isDark, setIsDark] = useState(false);
 
@@ -74,15 +75,11 @@ export default function OnTimeClient() {
 
       <motion.div
         initial={false}
-        animate={{
-          backgroundColor: isDark ? "#000000" : "#ffffff",
-          color: isDark ? "#ffffff" : "#000000",
-        }}
+        className={`${wrapperClasses} relative overflow-hidden`}
         transition={{
           duration: 1.2,
           ease: [0.77, 0, 0.175, 1],
         }}
-        className="relative overflow-hidden"
       >
         <div ref={heroRef} className="h-[100dvh]">
           <Hero />

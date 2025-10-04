@@ -1,0 +1,95 @@
+---
+import PagesLayout from "../layouts/PagesLayout.astro";
+
+/**
+ * Blog page for the Ontime website.  This page is inspired by the
+ * LeStudio “Creative Hub” blog template.  It features a hero
+ * section introducing the blog and a simple list of posts.  Each
+ * post includes an image, title, excerpt, tags and year.  Feel free
+ * to replace the placeholder images and text with your own content.
+ */
+
+const posts = [
+  {
+    title: "Branding in the Digital Age",
+    excerpt:
+      "In the digital age, branding is more important than ever. Learn how our agency helps businesses build strong, memorable brands online.",
+    image:
+      "https://images.unsplash.com/photo-1556767576-cf1e08fc2036?auto=format&fit=crop&w=800&q=80",
+    tags: ["Branding", "Web Design"],
+    year: 2024,
+  },
+  {
+    title: "The Art of Visual Storytelling",
+    excerpt:
+      "Visual storytelling is a powerful tool that can transform the way brands communicate with their audience, making messages more engaging and memorable.",
+    image:
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
+    tags: ["Web Design", "Digital Marketing"],
+    year: 2024,
+  },
+  {
+    title: "Creative Design Inspiration",
+    excerpt:
+      "Explore the world of creative design with our latest insights and trends that inspire innovation and creativity in every project.",
+    image:
+      "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=800&q=80",
+    tags: ["Social Media", "Web Design"],
+    year: 2024,
+  },
+  {
+    title: "The Future of Digital Design",
+    excerpt:
+      "Digital design is evolving rapidly. Explore the future trends that will shape the industry and how our agency is preparing for them.",
+    image:
+      "https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=800&q=80",
+    tags: ["Branding"],
+    year: 2023,
+  },
+  {
+    title: "Sustainable Design Practices",
+    excerpt:
+      "Sustainability in design is no longer an option; it's a necessity. Discover how our agency incorporates eco-friendly practices into every project.",
+    image:
+      "https://images.unsplash.com/photo-1485211045113-3b43e734a620?auto=format&fit=crop&w=800&q=80",
+    tags: ["Branding", "Web Design"],
+    year: 2023,
+  },
+];
+---
+
+<PagesLayout title="Creative Hub">
+  <section class="py-20 text-center px-4">
+    <h1 class="text-5xl md:text-6xl font-bold mb-6">
+      LeStudio✲ Creative Hub
+    </h1>
+    <p class="max-w-3xl mx-auto text-lg text-gray-600">
+      Dive into a world where Parisian flair meets cutting‑edge design. Our
+      blog is a canvas for thought‑provoking ideas, industry insights and
+      behind‑the‑scenes glimpses into our creative process.
+    </p>
+  </section>
+
+  <!-- Posts grid -->
+  <section class="px-4 pb-20 grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
+    {posts.map((post) => (
+      <article class="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col" key={post.title}>
+        <img
+          src={post.image}
+          alt={post.title}
+          class="h-48 w-full object-cover"
+          loading="lazy"
+        />
+        <div class="p-6 flex flex-col flex-grow">
+          <h3 class="text-2xl font-semibold mb-2 flex-grow">{post.title}</h3>
+          <p class="text-gray-600 mb-4 flex-grow">{post.excerpt}</p>
+          <div class="text-sm text-gray-500 mt-auto">
+            <span>{post.tags.join(', ')}</span>
+            <span class="mx-1">·</span>
+            <span>{post.year}</span>
+          </div>
+        </div>
+      </article>
+    ))}
+  </section>
+</PagesLayout>

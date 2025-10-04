@@ -8,7 +8,9 @@ export const sectionsData = [
     imgAlt: "Creative team collaborating in a modern office",
     cta: 'See Our Work',
     link: '/projects',
-     theme: "light"
+    theme: "light",
+    video: "/videos/beach.mp4",
+    title: "Beach"
   },
   {
     id: 2,
@@ -18,7 +20,9 @@ export const sectionsData = [
     imgAlt: "Designer working on branding materials",
     cta: "What We Do",
     link: '/services',
-    theme: "dark"
+    theme: "dark",
+    video: "/videos/bronco.mp4",
+    title: "Bronco"
   },
   {  id: "brands",
     theme: "light",

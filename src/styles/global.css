@@ -58,12 +58,12 @@ body {
 }
 
 :root {
-  --colors-bg-default: #ffffff;
-  --colors-bg-dark:   #000000;
+  --colors-bg-default: #f9f5d9;
+  --colors-bg-dark:   #00131c;
 }
 html.dark {
-  --colors-bg-default: #000000;
-  --colors-bg-dark:   #ffffff;
+  --colors-bg-default: #00131c;
+  --colors-bg-dark:   #f9f5d9;
 }
 
 

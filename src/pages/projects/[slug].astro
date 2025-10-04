@@ -1,0 +1,26 @@
+---
+import PagesLayout from "../../../src/layouts/PagesLayout.astro";
+import ProjectDetailContent from "../../components/ProjectDetailContent.jsx";
+import { projectsData } from "../../data/projectsData.js";
+
+const { slug } = Astro.params;
+const project = projectsData.find((p) => p.slug === slug);
+if (!project) {
+  throw new Error(`Project not found for slug: ${slug}`);
+}
+const otherProjects = projectsData.filter((p) => p.slug !== slug);
+
+/**
+ * Provide all available slugs to Astro so it can pre-generate
+ * static pages for each project.  Without this function Astro will
+ * complain that `getStaticPaths` is required for dynamic routes.
+ */
+export async function getStaticPaths() {
+  return projectsData.map((proj) => ({ params: { slug: proj.slug } }));
+}
+---
+
+<PagesLayout title={project.title}>
+  <!-- Render the project case study using the reusable component with animations -->
+  <ProjectDetailContent client:load project={project} otherProjects={otherProjects} />
+</PagesLayout>

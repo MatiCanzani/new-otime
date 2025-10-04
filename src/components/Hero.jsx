@@ -108,7 +108,7 @@ export default function Hero() {
             className=" w-full font-suisse text-5xl md:text-8xl font-semibold leading-tight mb-6 text-current overflow-hidden text-center"
             transition={{ duration: 1, ease: "easeOut" }}
           >
-            {["WE DESIGN CLIENTS", "WE CRAFT VISUAL IMPACT"].map((text, i) => (
+            {["Creativity and Publicity", "At the Right Time."].map((text, i) => (
               <motion.div
                 key={i}
                 custom={i}
@@ -126,8 +126,8 @@ export default function Hero() {
             variants={parasVariant}
           >
             {[
-              "A creative agency based in Buenos Aires, led by Nicolás Canzani.",
-              "Visual content, Branding and performance with vision, Graphic Design, and Strategy.",
+              "Ontime Creative is a Buenos Aires–based agency led by Nicolás Canzani.",
+              "We deliver branding, visual content, and publicity strategies for companies that want to stand out with precision and style.",
             ].map((line, idx) => (
               <motion.p key={idx} variants={paraLineVariant}>
                 {line}
@@ -141,7 +141,7 @@ export default function Hero() {
           >
             <CTA
               link="/contact"
-              text="See Our Work"
+              text="Experience On Time"
               className="text-current bg-yellow-400 hover:bg-yellow-500/90"
             />
           </motion.div>

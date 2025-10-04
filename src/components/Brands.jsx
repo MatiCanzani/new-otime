@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 
+import CTA from "./CallToAction";
+
 const brands = [
   {
     name: "Jeep",
@@ -35,6 +37,11 @@ export default function Brands() {
         >
           Brands That Chose to Leave a Mark
         </motion.h2>
+        <CTA
+          link="/contact"
+          text="Experience On Time"
+          className="text-current bg-yellow-400 hover:bg-yellow-500/90"
+        />
 
         <div className="flex flex-wrap justify-center items-center gap-12">
           {brands.map((brand, index) => (

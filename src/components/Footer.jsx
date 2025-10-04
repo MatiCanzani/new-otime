@@ -1,62 +1,81 @@
+/**
+ * Improved Footer component for ONTIME.  This footer draws
+ * inspiration from the LeStudio template while keeping your brand
+ * identity.  It is designed mobile‑first: stacked layout on small
+ * screens and a responsive grid on larger devices.  The content is
+ * structured into four sections: a call to action, contact info,
+ * sitemap and socials.  Additional navigation links can be added to
+ * the fourth column without duplicating markup elsewhere.
+ */
+import FooterColumn from "./FooterColumn.jsx";
+
 export default function Footer() {
+  // Define the footer columns data in a single array.  Each column has a
+  // title and a list of links with their respective hrefs.  Keeping
+  // this data at the top of the component makes it easy to add or
+  // remove entries without modifying the markup below.
+  const columns = [
+    {
+      title: "Contact us",
+      links: [
+        { text: "ontime@ontime.com", href: "mailto:ontime@ontime.com" },
+        { text: "+54 9 11 4143‑0471", href: "tel:+5491141430471" },
+      ],
+    },
+    {
+      title: "Sitemap",
+      links: [
+        { text: "Home", href: "/" },
+        { text: "Who We Are", href: "/who-we-are" },
+        { text: "Services", href: "/services" },
+        { text: "Projects", href: "/projects" },
+        { text: "Contact", href: "/contact" },
+      ],
+    },
+    {
+      title: "Socials",
+      links: [
+        { text: "Instagram", href: "#" },
+        { text: "LinkedIn", href: "#" },
+      ],
+    },
+    {
+      title: "More",
+      links: [
+        { text: "Blog", href: "/blog" },
+        { text: "Privacy Policy", href: "/privacy-policy" },
+      ],
+    },
+  ];
   return (
-    <footer
-      className="bg-black dark:bg-black text-white transition-colors duration-500 w-full pt-10"
-    >
-      <div className="container mx-auto px-6 py-16 max-w-7xl">
-        <h1 className="text-3xl md:text-5xl font-extrabold mb-4 uppercase">
-          Make Your Brand Unforgettable
-        </h1>
-
-        <div className="flex flex-col justify-center my-8 gap-2">
-          <p className="text-base md:text-lg text-gray-300">
-            Ready to Make Something That Stands Out?
+    <footer className="bg-black text-white transition-colors duration-500 w-full pt-12 pb-8">
+      <div className="container mx-auto px-6 space-y-12">
+        {/* Call to action section */}
+        <div className="text-center">
+          <h2 className="text-4xl md:text-6xl font-extrabold uppercase mb-4">
+            Let’s create something awesome/
+          </h2>
+          <p className="text-base md:text-lg text-gray-400 mb-6">
+            Ready to make something that stands out?
           </p>
-
           <a
             href="/contact"
             className="inline-flex items-center font-semibold hover:text-yellow-500 transition"
           >
             <span>Let’s Talk</span>
-            <span className="text-2xl">↠</span>
+            <span className="ml-1 text-2xl">↠</span>
           </a>
         </div>
-        <hr className="border-gray-700 mb-12" />
-
-        <div className="flex flex-col md:flex-row gap-12 md:gap-24 text-lg md:text-xl justify-center text-center">
-          <div className="flex-1">
-            <h2 className="font-semibold mb-4">Contact us</h2>
-            <div className="space-y-3 mb-6 text-sm font-medium">
-              <a href="mailto:ONTIME@ontime.com" className="block hover:underline">
-                ontime@ontime.com
-              </a>
-              <a href="tel:+543414130471" className="block hover:underline">
-                +54 9 11 4143-0471
-              </a>
-            </div>
-          </div>
-
-          <div className="flex-1 ">
-            <h3 className="font-semibold mb-4">Sitemap</h3>
-            <nav className="space-y-2 text-sm">
-              <a href="/" className="block hover:underline">Home</a>
-              <a href="/about" className="block hover:underline">About Us</a>
-              <a href="/services" className="block hover:underline">Services</a>
-              <a href="/projects" className="block hover:underline">Projects</a>
-              <a href="/contact" className="block hover:underline">Contact</a>
-            </nav>
-          </div>
-
-          <div className="flex-1">
-            <h3 className="font-semibold mb-4">Socials</h3>
-            <nav className="space-y-2 text-sm">
-              <a href="#" className="block hover:underline">Instagram</a>
-            </nav>
-          </div>
+        {/* Links grid using FooterColumn for each section */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 text-sm md:text-base text-center md:text-left">
+          {columns.map((col) => (
+            <FooterColumn key={col.title} title={col.title} links={col.links} />
+          ))}
         </div>
-      </div>
-      <div className="text-sm text-center text-gray-500 w-full">
-        2025 — ONTIME<sup className="text-yellow-400">✲</sup>
+        {/* Copyright */}
+        <div className="text-sm text-center text-gray-500">
+          2025 — ONTIME<sup className="text-yellow-400">✲</sup>
+        </div>
       </div>
     </footer>
   );

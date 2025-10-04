@@ -9,11 +9,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        mostard: '#bbbe64',
-        grape: '#8e5572',
-        offwhite: '#f2f7f2',
-        beige: '#58aa99',
-        darkgrape: '#443850',
+        grape: '#5e1ae2',
+        offwhite: '#f9f5d9',
+        beige: '#f9f5d9',
+        yellowOntime: '#f8f099',
+        orangeOntime: '#fabb4c',
+        blackOntime: '#00131c',
         bgDefault: 'var(--colors-bg-default)',
         bgDark: 'var(--colors-bg-dark)',
       },
