@@ -40,7 +40,7 @@ export default function Brands() {
         <CTA
           link="/contact"
           text="Experience On Time"
-          className="text-current bg-yellow-400 hover:bg-yellow-500/90"
+          className="text-offwhite bg-purple-900 hover:bg-yellow-500/90"
         />
 
         <div className="flex flex-wrap justify-center items-center gap-12">
