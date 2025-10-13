@@ -12,7 +12,7 @@ const Carousel = () => {
         clickable: true,
       }}
       modules={[Pagination]}
-      className="mySwiper bg-black"
+      className="mySwiper bg-black-ontime"
     >
       {carouselItems.map((slide, index) => (
         <SwiperSlide key={index} className="relative w-full">
@@ -26,9 +26,9 @@ const Carousel = () => {
               sizes="(max-width: 479px) 171px, (max-width: 991px) 163px, 268px"
               srcSet={`${slide.imageUrl}?w=500 500w, ${slide.imageUrl}?w=800 800w, ${slide.imageUrl}?w=1080 1080w, ${slide.imageUrl}?w=1600 1600w`}
             />
-            <div className="absolute top-0 left-0 right-0 bottom-0 bg-black opacity-25 group-hover:opacity-0 transition-opacity"></div>
+            <div className="absolute top-0 left-0 right-0 bottom-0 bg-black-ontime opacity-25 group-hover:opacity-0 transition-opacity"></div>
 
-            <div className="absolute inset-0 flex justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div className="absolute inset-0 flex justify-center items-center text-offwhite opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <h3 className="text-xl font-semibold">{slide.title}</h3>
             </div>
             </a>

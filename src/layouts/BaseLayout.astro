@@ -1,5 +1,4 @@
 ---
-import BackgroundAnimator from '../components/BackgroundAnimator.jsx';
 import Footer from '../components/Footer.jsx';
 import Header from '../components/Header.astro';
 import '../styles/global.css';
@@ -18,16 +17,14 @@ const { title, description } = Astro.props;
   <body class="font-suisse transition-colors duration-700 antialiased">
     <div
       id="transition"
-      class="fixed inset-0 bg-black z-50 transform translate-y-full transition-transform duration-[1200ms] ease-in-out"
+      class="fixed inset-0 bg-grape z-50 transform translate-y-full transition-transform duration-[1200ms] ease-in-out"
     />
     <div id="content" class="opacity-100 transition-opacity duration-700">
-      <BackgroundAnimator client:load>
         <Header />
         <main>
           <slot />
         </main>
         <Footer />
-      </BackgroundAnimator>
     </div>
   </body>
 </html>

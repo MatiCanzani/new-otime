@@ -1,23 +1,24 @@
-import { defineConfig } from "astro/config";
-import react from "@astrojs/react";
 import partytown from "@astrojs/partytown";
+import react from "@astrojs/react";
 import vercel from "@astrojs/vercel";
+import tailwindcss from "@tailwindcss/vite";
+import { defineConfig } from "astro/config";
+
 
 // Importa el plugin PostCSS de Tailwind v4 y autoprefixer en ESM
-import tailwindcssPostcss from "@tailwindcss/postcss";
-import autoprefixer from "autoprefixer";
 
 export default defineConfig({
   integrations: [react(), partytown()],
   adapter: vercel(),
   vite: {
-    css: {
-      postcss: {
-        plugins: [
-          tailwindcssPostcss(),  // Tailwind v4 PostCSS plugin
-          autoprefixer(),        // Autoprefixer
-        ],
-      },
-    },
+    plugins: [tailwindcss()],
+    // css: {
+    //   postcss: {
+    //     plugins: [
+    //       tailwindcssPostcss(),
+    //       autoprefixer(),
+    //     ],
+    //   },
+    // },
   },
 });

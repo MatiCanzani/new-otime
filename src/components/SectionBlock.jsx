@@ -15,7 +15,7 @@ export default function SectionBlock({ section }) {
         <Video
           mp4_4k={section.video}
           mp4_1080={section.video}
-          poster="/video/hero_poster.jpg"
+          // poster="/video/hero_poster.jpg"
           className="w-screen block"
         />
       </div>

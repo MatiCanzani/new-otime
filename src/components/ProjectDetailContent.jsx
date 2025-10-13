@@ -1,4 +1,3 @@
-// src/components/ProjectDetailContent.jsx
 import { motion } from "framer-motion";
 
 function toArray(val) {
@@ -8,7 +7,6 @@ function toArray(val) {
 }
 
 function getCategories(obj) {
-  // soporta { categories: [...] } o { category: "..." }
   if (Array.isArray(obj?.categories)) return obj.categories;
   if (typeof obj?.category === "string") return [obj.category];
   return [];
@@ -25,8 +23,7 @@ export default function ProjectDetailContent({ project, otherProjects }) {
 
   return (
     <>
-      {/* Hero section */}
-      <section className="bg-black text-white pt-28 pb-16 px-4 md:px-8">
+      <section className="bg-grape text-offwhite pt-28 pb-16 px-4 md:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.h1
             className="text-5xl md:text-7xl font-extrabold tracking-tight mb-4"
@@ -49,7 +46,6 @@ export default function ProjectDetailContent({ project, otherProjects }) {
         </div>
       </section>
 
-      {/* Hero image */}
       {project.heroImage && (
         <motion.div
           className="overflow-hidden"
@@ -65,7 +61,6 @@ export default function ProjectDetailContent({ project, otherProjects }) {
         </motion.div>
       )}
 
-      {/* Description */}
       {paragraphs.length > 0 && (
         <section className="px-4 md:px-8 py-12">
           <div className="max-w-4xl mx-auto space-y-6">
@@ -85,7 +80,6 @@ export default function ProjectDetailContent({ project, otherProjects }) {
         </section>
       )}
 
-      {/* Sections */}
       {sections.length > 0 && (
         <section className="px-4 md:px-8 py-12 space-y-16">
           {sections.map((sec, idx) => (
@@ -108,7 +102,6 @@ export default function ProjectDetailContent({ project, otherProjects }) {
         </section>
       )}
 
-      {/* Gallery */}
       {gallery.length > 0 && (
         <section className="px-4 md:px-8 py-12">
           <div className="max-w-6xl mx-auto grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -133,7 +126,6 @@ export default function ProjectDetailContent({ project, otherProjects }) {
         </section>
       )}
 
-      {/* Quote */}
       {quote && (
         <section className="bg-gray-50 px-4 md:px-8 py-16">
           <div className="max-w-4xl mx-auto text-center">
@@ -161,7 +153,6 @@ export default function ProjectDetailContent({ project, otherProjects }) {
         </section>
       )}
 
-      {/* More work */}
       {Array.isArray(otherProjects) && otherProjects.length > 0 && (
         <section className="px-4 md:px-8 py-16">
           <div className="max-w-7xl mx-auto">
@@ -184,8 +175,8 @@ export default function ProjectDetailContent({ project, otherProjects }) {
                       alt={proj.title}
                       className="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-4">
-                      <h3 className="text-white text-lg font-semibold mb-1">{proj.title}</h3>
+                    <div className="absolute inset-0 bg-grape/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-4">
+                      <h3 className="text-offwhite text-lg font-semibold mb-1">{proj.title}</h3>
                       {(cats.length > 0 || proj.year) && (
                         <p className="text-gray-300 text-xs mb-1">
                           {[...cats, proj.year].filter(Boolean).join(" · ")}

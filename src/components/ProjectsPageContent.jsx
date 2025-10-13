@@ -11,8 +11,7 @@ export default function ProjectsPageContent() {
 
   return (
     <>
-      {/* Hero */}
-      <section className="bg-black text-white py-32 px-6 text-center">
+      <section className="bg-grape text-offwhite py-32 px-6 text-center">
         <motion.h1
           variants={fadeUp}
           initial="hidden"
@@ -42,7 +41,7 @@ export default function ProjectsPageContent() {
         >
           <a
             href="/contact"
-            className="inline-block bg-white text-black py-3 px-6 rounded-full font-semibold hover:bg-neutral-200 transition"
+            className="inline-block bg-black-ontime text-offwhite py-3 px-6 rounded-full font-semibold hover:bg-neutral-200 transition"
           >
             Start a project
           </a>
@@ -50,7 +49,7 @@ export default function ProjectsPageContent() {
       </section>
 
       {/* Scroll Stack simple */}
-      <section className="relative bg-black text-white">
+      <section className="relative bg-grape text-offwhite">
         {[...projectsData].reverse().map((project, idx) => (
           <motion.div
             key={project.slug}
@@ -69,7 +68,7 @@ export default function ProjectsPageContent() {
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-black/25" />
+              <div className="absolute inset-0 bg-grape/25" />
             </div>
 
             {/* Overlay contenido */}

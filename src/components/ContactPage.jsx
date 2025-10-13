@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="hero section bg-black text-white py-20 px-6">
+    <section className="hero section bg-grape text-offwhite py-20 px-6">
       <div className="container mx-auto flex flex-col md:flex-row items-center gap-12">
         <div className="flex flex-col flex-1">
           <h1 className="text-6xl md:text-[5rem] font-semibold leading-tight mb-6 font-suisse">
@@ -15,7 +15,7 @@ export default function Hero() {
 
           <a
             href="/contact"
-            className="inline-flex items-center bg-yellow-400 text-black font-semibold px-6 py-3 rounded-lg hover:bg-yellow-500 transition"
+            className="inline-flex items-center bg-yellow-400 text-offwhite font-semibold px-6 py-3 rounded-lg hover:bg-yellow-500 transition"
           >
             <span>● Start a project</span>
             <span className="ml-2 text-2xl">↠</span>

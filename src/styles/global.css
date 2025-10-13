@@ -28,17 +28,34 @@ body {
 }
 
 
-/* CSS Variables (opcional, si las querés usar con var(--x)) */
 :root {
   --font-suisse: "Suisse Intl", sans-serif;
-  --color-mostard: #bbbe64;
-  --color-grape: #8e5572;
-  --color-off-white: #f2f7f2;
-  --color-beige: #58aa99;
-  --color-dark-grape: #443850;
+  --color-grape: #5e1ae2;
+  --color-offwhite: #f9f5d9;
+  --color-beige: #f9f5d9;
+  --color-yellow-ontime: #f8f099;
+  --color-orange-ontime: #fabb4c;
+  --color-black-ontime: #00131c;
 }
 
-/* Test classes */
+@theme {
+  --color-grape: #5e1ae2;
+  --color-offwhite: #f9f5d9;
+  --color-beige: #f9f5d9;
+  --color-yellow-ontime: #f8f099;
+  --color-orange-ontime: #fabb4c;
+  --color-black-ontime: #00131c;
+
+  --color-bg-default: var(--colors-bg-color-black-ontime);
+  --color-bg-dark: var(--colors-bg-color-black-ontime);
+
+  --font-suisse: "Suisse Intl", sans-serif;
+
+  --duration-1200: 1200ms;
+  --ease-in-out-custom: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+
 .font-regular {
   font-family: var(--font-suisse);
   font-weight: 400;
@@ -51,6 +68,7 @@ body {
   font-family: var(--font-suisse);
   font-weight: 700;
 }
+
 .color {
   background-color: var(--color-mostard);
   color: white;
@@ -58,12 +76,13 @@ body {
 }
 
 :root {
-  --colors-bg-default: #f9f5d9;
-  --colors-bg-dark:   #00131c;
+  --colors-bg-default: var(--color-black-ontime);;
+  --colors-bg-dark: var(--color-black-ontime);
 }
+
 html.dark {
-  --colors-bg-default: #00131c;
-  --colors-bg-dark:   #f9f5d9;
+  --colors-bg-default: var(--color-black-ontime);
+  --colors-bg-dark: var(--color-black-ontime);;
 }
 
 

@@ -19,7 +19,7 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-white p-8 rounded-lg shadow-lg max-w-lg mx-auto"
+      className="bg-black-ontime p-8 rounded-lg shadow-lg max-w-lg mx-auto"
       noValidate
     >
       <div className="mb-6">
@@ -69,7 +69,7 @@ export default function ContactForm() {
 
       <button
         type="submit"
-        className="w-full bg-yellow-400 text-black font-semibold rounded-md py-3 hover:bg-yellow-500 transition"
+        className="w-full bg-yellow-400 text-offwhite font-semibold rounded-md py-3 hover:bg-yellow-500 transition"
       >
         Send Message
       </button>
