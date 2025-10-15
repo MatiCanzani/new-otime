@@ -44,7 +44,6 @@ export default function OnTimeClient() {
     return () => clearTimeout(t);
   }, []);
 
-  // Wrapper decide colores finales; al montar, evitamos FOUC
   const wrapperBase =
     "relative min-h-screen overflow-hidden transition-colors duration-700 ease-in-out text-offwhite";
   const wrapperClasses = mounted
@@ -81,10 +80,10 @@ export default function OnTimeClient() {
               <Brands />
             </div>
           ) : (
-            <SectionBlock key={section.id} section={section} />
+            <SectionBlock key={section.id} section={section}/>
           )
         )}
-      </motion.div>
+      </motion.div >
     </>
   );
 }

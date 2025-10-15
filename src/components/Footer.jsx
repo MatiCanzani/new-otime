@@ -49,7 +49,7 @@ export default function Footer() {
   ];
   return (
     <footer className="bg-black-ontime text-offwhite transition-colors duration-500 w-full pt-12 pb-8">
-      <div className="container mx-auto px-6 space-y-12">
+      <div className="container mx-auto px-6 space-y-12 mt-20">
         {/* Call to action section */}
         <div className="text-center">
           <h2 className="text-4xl md:text-6xl font-extrabold uppercase mb-4">

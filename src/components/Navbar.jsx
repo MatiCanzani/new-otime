@@ -26,7 +26,7 @@ export default function Navbar() {
   };
 
   const menuVariants = {
-    hidden: { opacity: 0},
+    hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       y: 0,
@@ -35,12 +35,12 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 text-offwhite text-[clamp(1rem,1.7vw,1.7vw)] leading-[1.4] bg-grape">
+    <nav className="fixed top-0 left-0 w-full z-[120] text-offwhite text-[clamp(1rem,1.7vw,1.7vw)] leading-[1.4] bg-grape">
       <motion.div
         variants={menuVariants}
         initial="hidden"
         animate="visible"
-        className="absolute z-50 w-full bg-transparent mx-auto px-6 py-4 flex justify-between items-center">
+        className="absolute z-[140] w-full bg-transparent mx-auto px-6 py-4 flex justify-between items-center">
         <a href="/" className="text-xl font-bold tracking-tight">
           Ontime
         </a>
@@ -50,7 +50,7 @@ export default function Navbar() {
           onClick={() => setMenuOpen((o) => !o)}
           aria-label="Toggle Menu"
         >
-          <span className="relative z-10 text-sm">
+          <span className="relative text-sm">
             {menuOpen ? "✕ CLOSE" : "● MENU"}
           </span>
           <span className="absolute bottom-0 left-0 w-full h-[2px] bg-black-ontime transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
@@ -60,12 +60,13 @@ export default function Navbar() {
       <AnimatePresence>
         {menuOpen && (
           <motion.div
-            className="fixed top-0 left-0 w-full h-full bg-black-ontime text-offwhite z-40 flex items-center justify-center"
+            className="fixed inset-0 w-full h-full bg-black-ontime text-offwhite z-[130] flex items-center justify-center"
             variants={backdropVariants}
             initial="hidden"
             animate="visible"
             exit="exit"
           >
+
             <motion.ul className="space-y-8 text-center" role="menu">
               {menuItems.map(({ name, href }) => (
                 <motion.li
@@ -73,6 +74,7 @@ export default function Navbar() {
                   variants={itemVariants}
                   role="none"
                 >
+                  
                   <a
                     href={href}
                     onClick={() => setMenuOpen(false)}

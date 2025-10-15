@@ -48,7 +48,6 @@ export default function Hero() {
     return unlock;
   }, [start]);
 
-  // Dispara la animación después de un breve delay
   useEffect(() => {
     const t = setTimeout(() => setStart(true), 200);
     return () => clearTimeout(t);
@@ -60,23 +59,21 @@ export default function Hero() {
 
   return (
     <motion.section
-      className="relative h-dvh px-6 overflow-hidden bg-black-ontime text-white"
+      className="relative h-dvh px-6 overflow-hidden bg-transparent text-white"
       initial="hidden"
       whileInView="visible"
       viewport={{ amount: 0.5 }}
       animate={played ? "visible" : "hidden"}
     >
-      {/* OVERLAY: SIEMPRE MONTADO, se mueve de abajo hacia arriba */}
       <motion.div
         className="absolute inset-0 z-[60] pointer-events-none bg-grape"
         style={{ willChange: "transform" }}
         initial={false}
         animate={start ? { y: "-100%" } : { y: "0%" }}
-        transition={{ delay: 1, duration: 1.4, ease: "easeInOut" }}
+        transition={{ delay: 1.2, duration: 1.4, ease: "easeInOut" }}
         onAnimationComplete={() => setStart(true)}
       />
 
-      {/* CONTENIDO: por encima del overlay */}
       <div className="relative z-[70] container mx-auto h-full flex flex-col gap-4 items-start md:items-center justify-center">
         <motion.h1
           className="w-full font-suisse text-5xl md:text-8xl font-semibold leading-tight mb-6 overflow-hidden text-center text-white"
