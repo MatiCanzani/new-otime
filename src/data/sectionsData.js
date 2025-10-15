@@ -35,12 +35,4 @@ export const sectionsData = [
     id: "brands",
     theme: "dark",
   },
-  {
-    id: 4,
-    number: "4.",
-    theme: "light",
-    title: "Manfiesto",
-    theme: "light",
-    text:["The call to break free from what's expected. From the simulation. From the feed.We design for those who feel the system is too small for their vision. We create brands that don’t just grow — they escape gravity.If you’ve made it this far, you’ve probably felt it too.That whisper in your head: “this isn’t the first time.”Good.You’re not here by chance.You’re here to LEAVE."],
-  },
 ];

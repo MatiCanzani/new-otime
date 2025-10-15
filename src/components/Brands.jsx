@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 
-import CTA from "./CallToAction";
 
 const brands = [
   {
@@ -37,12 +36,13 @@ export default function Brands() {
         >
           Brands That Chose to be On Time.
         </motion.h2>
-        <CTA
-          link="/contact"
-          text="Experience On Time"
-          className="text-offwhite bg-purple-900 hover:bg-yellow-500/90"
-        />
+        <motion.div initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.7 }} className="w-full mx-auto text-balance text-center md:mt-4 md:px-6 text-base md:text-xl leading-relaxed font-suisse">
+          <p className="text-white/90">Our clients range from global corporations to high-growth startups. They have one thing in common: a vision for creativity as a driver of business.</p>
 
+        </motion.div>
+        {/* 
         <div className="flex flex-wrap justify-center items-center gap-12">
           {brands.map((brand, index) => (
             <motion.div
@@ -60,7 +60,30 @@ export default function Brands() {
               />
             </motion.div>
           ))}
-        </div>
+        </div> */}
+      </div>
+      <div className="container mx-auto px-6 text-center my-20">
+        <motion.h3
+          className="text-2xl md:text-4xl font-bold mb-16"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.7 }}
+        >
+          Manifiesto.
+        </motion.h3>
+        <motion.div initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }} className="w-full mx-auto text-balance text-center md:mt-4 md:px-6 text-base md:text-xl leading-relaxed font-suisse">
+          <p className="text-white/90">The call to break free from what's expected.
+            From the simulation. From the feed.
+            We design for those who feel the system is too small for their vision.
+            We create brands that don’t just grow — they escape gravity.
+            If you’ve made it this far, you’ve probably felt it too.
+            That whisper in your head: “this isn’t the first time.”
+            Good.
+            You’re not here by chance.
+            You’re here to LEAVE.</p>
+        </motion.div>
       </div>
     </section>
   );
