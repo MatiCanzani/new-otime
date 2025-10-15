@@ -53,16 +53,16 @@ export default function Footer() {
         {/* Call to action section */}
         <div className="text-center">
           <h2 className="text-4xl md:text-6xl font-extrabold uppercase mb-4">
-            Let’s create something awesome/
+           Make Your Brand Unforgettable.
           </h2>
           <p className="text-base md:text-lg text-gray-400 mb-6">
-            Ready to make something that stands out?
+            It’s time to give your company the presence it deserves.
           </p>
           <a
             href="/contact"
             className="inline-flex items-center font-semibold hover:text-yellow-500 transition"
           >
-            <span>Let’s Talk</span>
+            <span>Start a Project</span>
             <span className="ml-1 text-2xl">↠</span>
           </a>
         </div>

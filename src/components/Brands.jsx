@@ -35,7 +35,7 @@ export default function Brands() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          Brands That Chose to Leave a Mark
+          Brands That Chose to be On Time.
         </motion.h2>
         <CTA
           link="/contact"
